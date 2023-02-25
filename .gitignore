@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/object-oriented-programming-homework/v17/.wsuo
+/.vs
+/week1/ConsoleApplication/.vs/ConsoleApplication/FileContentIndex
+/week1/ConsoleApplication/.vs/ConsoleApplication/v17/ipch/AutoPCH/b3863e05c6216dff
+/week1/ConsoleApplication/.vs/ConsoleApplication/v17
+/week1/ConsoleApplication/ConsoleApplication.sln
+/week1/ConsoleApplication/ConsoleApplication.vcxproj
+/week1/ConsoleApplication/ConsoleApplication.vcxproj.filters
+/week1/ConsoleApplication/ConsoleApplication.vcxproj.user
