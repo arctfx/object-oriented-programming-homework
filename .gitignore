@@ -11,3 +11,8 @@
 /week1/ConsoleApplication/ConsoleApplication.vcxproj
 /week1/ConsoleApplication/ConsoleApplication.vcxproj.filters
 /week1/ConsoleApplication/ConsoleApplication.vcxproj.user
+/week1/.vs/ConsoleApplication
+*.sln
+*.vcxproj
+*.filters
+*.user
