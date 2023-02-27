@@ -1,5 +1,5 @@
-#define DYNAMIC_ARRAY
-#ifdef DYNAMIC_ARRAY
+#ifndef DYNAMIC_ARRAY_H
+#define DYNAMIC_ARRAY_H
 #include <cassert>
 #include <iostream>
 

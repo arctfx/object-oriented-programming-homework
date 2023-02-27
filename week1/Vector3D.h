@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VECTOR3D_H
+#define VECTOR3D_H
 
 class Vector3D
 {
@@ -17,4 +18,6 @@ private:
 	double m_y;
 	double m_z;
 };
+
+#endif // VECTOR3D_H
 
