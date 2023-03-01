@@ -11,13 +11,9 @@ public:
 	DynamicArray(size_t capacity = 0);
 	~DynamicArray();
 
-
-	/// reallocate memory with different capacity
-	bool reallocateMemory(int*& array);
-
 	/// resize the array, if necessary
 	/// double the size
-	bool resize(int*& array, size_t size, size_t& capacity);
+	bool resize(const size_t size);
 
 	/// add element at the end of the array
 	/// if the size is less than the capacity, the array should be resized
@@ -29,7 +25,7 @@ public:
 	bool addElement(T newElem, size_t position);
 
 	/// print the elements of the array
-	void print(const int* array, size_t size, size_t capacity);
+	void print();
 
 	/// remove the element at the specified position
 	/// if the number of elements are less than 1/4 of the capacity,
@@ -37,6 +33,9 @@ public:
 	bool removeElement(size_t position);
 
 private:
+	/// reallocate memory with different capacity
+	bool reallocateMemory(int*& array);
+
 	/// allocate the memory
 	bool allocateMemory(size_t capacity);
 
