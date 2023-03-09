@@ -17,3 +17,5 @@
 *.vcxproj
 *.filters
 *.user
+*.replit
+*.nix
