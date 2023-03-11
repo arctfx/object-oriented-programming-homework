@@ -5,35 +5,44 @@
 
 class MyString {
 public:
-  MyString(size_t size = 1);
-  MyString(const char *str);
-  ~MyString();
+    //Constructors
+    MyString(size_t size = 1);
+    MyString(const char* str);
+    ~MyString();
 
-  // operator =
-  MyString &operator=(const MyString &other);
+    // Operators
+    MyString& operator=(const MyString& other);
+    MyString& operator+(const MyString& other); // = append
 
-  size_t length();         // returns the size of the string
-  char &at(unsigned indx); // дава достъп до символа на индекс indx.Ако няма
-                           // такъв индекс, метода да хвърли грешка.
-  int find(
-      char c,
-      unsigned startPos =
-          0); // връща първия индекс, на който се намира символа с, започвайки
-              // от startPos нататък.Ако такъвсимвол няма, метода да върне - 1.
-  bool empty(); // връща дали низа е празен.
-  MyString
-  substr(unsigned pos = 0,
-         unsigned n = 0); //връща подниза започващ на индекс pos и имащ дължина
-                          //n символа.Ако няма индекс pos, метода да хвърли
-                          //грешка.Ако pos + n > length(), да се върне подниза
-                          //започващ от pos и стигащ до края на низа.
-  void append(const MyString &str); // долепва низа str в края.
-  void print(); // отпечатва низа на екрана
+    
+    // Gets the symbol at index indx
+    // If no such index, throws an exception
+    char& at(unsigned indx);
+    // Returns the index of the first occurence of char c
+    // Starts iterating at index startPos
+    // If no such char found, returns -1
+    int find(char c, unsigned startPos = 0);
+    // Returns whether m_str is empty
+    // = (strlen(m_str) == 0)
+    bool empty();
+    // Returns the substring starting at index pos with a length of n symbols
+    // If no such index, throws an exception
+    // If pos + n > m_size, returns the substring starting at index pos
+    // and ending at index m_size
+    MyString substr(unsigned pos = 0, unsigned n = 0);
+    // Concatenated this->m_str and str
+    void append(const MyString& str);
+    // Prints m_str on the console
+    void print();
 
-  const char *get_str() const { return m_str; }
+    // Getters
+    const char* get_str() const { return m_str; }
+    size_t get_length();
 
 private:
-  char *m_str;
+    char* m_str = nullptr;
+    size_t m_size = 0; //includes terminating zeros
+
 };
 
 #endif
